@@ -3,3 +3,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .form-input {
+    @apply w-full border-b-[1px] border-[#000] pb-4 text-base outline-none;
+  }
+
+  .abs-content {
+    @apply h-[20px] w-[20px] rounded-full bg-[#ebbf60] content-[''];
+  }
+
+  .nav-link {
+    @apply m-5 cursor-pointer uppercase transition-all duration-300 hover:text-black;
+  }
+}

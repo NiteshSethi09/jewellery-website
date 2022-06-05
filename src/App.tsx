@@ -1,19 +1,14 @@
-import React, { Suspense } from 'react';
-// import Banner from './components/Banner/Banner';
-const Banner = React.lazy(() => import('./components/Banner/Banner'));
-// import Content from './components/Content/Content';
-const Content = React.lazy(() => import('./components/Content/Content'));
-// import Products from './components/Products/Products';
-const Products = React.lazy(() => import('./components/Products/Products'));
+import { Route, Routes } from 'react-router-dom';
+import Category from './pages/Category';
+import Home from './pages/Home';
 
 function App() {
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Banner />
-        <Products />
-        <Content />
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path=":category" element={<Category />} />
+      </Routes>
     </>
   );
 }

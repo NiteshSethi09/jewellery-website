@@ -9,7 +9,7 @@ const Products: React.FC = () => {
     const imageData = await axios.get(
       'https://khatri-alankar.herokuapp.com/api/categories/get'
     );
-    const res = await imageData.data.data;
+    const res = imageData.data.data;
 
     setData(res);
   }, []);
@@ -30,7 +30,7 @@ const Products: React.FC = () => {
             </h2>
             <hr />
           </div>
-          <div className="mt-4 grid grid-cols-3">
+          <div className="mt-4 flex flex-wrap justify-between">
             {data.map((item: ProductItemProps) => (
               <ProductItem {...item} key={item.id} />
             ))}

@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 
 const Header: React.FC<{}> = () => {
@@ -6,18 +7,18 @@ const Header: React.FC<{}> = () => {
       <img src={Logo} alt="" />
       <nav>
         <ul className="flex font-poppins text-lg text-white">
-          <li className="m-5 cursor-pointer uppercase transition-all duration-300 hover:text-black">
+          <NavLink to="" className="nav-link">
             Home
-          </li>
-          <li className="m-5 cursor-pointer uppercase transition-all duration-300 hover:text-black">
+          </NavLink>
+          <NavLink to="" className="nav-link">
             Products
-          </li>
-          <li className="m-5 cursor-pointer uppercase transition-all duration-300 hover:text-black">
+          </NavLink>
+          <NavLink to="" className="nav-link">
             Contact
-          </li>
-          <li className="m-5 cursor-pointer uppercase transition-all duration-300 hover:text-black">
+          </NavLink>
+          <NavLink to="" className="nav-link">
             About Us
-          </li>
+          </NavLink>
         </ul>
       </nav>
     </header>
